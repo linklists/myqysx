@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.system.mapper.SJ14Mapper">
+
+    <resultMap type="SJ14" id="SJ14Result">
+        <id property="id" column="id"/>
+        <result property="time" column="time"/>
+        <result property="position" column="position"/>
+        <result property="userid" column="userid"/>
+        <result property="constructionUnit" column="constructionUnit"/>
+        <result property="contractNumber" column="contractNumber"/>
+        <result property="supervisionUnit" column="supervisionUnit"/>
+        <result property="recordNumber" column="recordNumber"/>
+        <result property="projectName" column="projectName"/>
+        <result property="constructionTime" column="constructionTime"/>
+        <result property="projectLocation" column="projectLocation"/>
+        <result property="concreteStrength" column="concreteStrength"/>
+        <result property="cleanupCondition" column="cleanupCondition"/>
+        <result property="backfillRange" column="backfillRange"/>
+        <result property="backfillMaterial" column="backfillMaterial"/>
+        <result property="compactionMechanical" column="compactionMechanical"/>
+        <result property="backfillLevel" column="backfillLevel"/>
+        <result property="looseThickness" column="looseThickness"/>
+        <result property="compactionCheck" column="compactionCheck"/>
+        <result property="testRecordNumber" column="testRecordNumber"/>
+        <result property="backfillLevel2" column="backfillLevel2"/>
+        <result property="looseThickness2" column="looseThickness2"/>
+        <result property="compactionCheck2" column="compactionCheck2"/>
+        <result property="testRecordNumber2" column="testRecordNumber2"/>
+        <result property="description" column="description"/>
+    </resultMap>
+
+    <select id="selectSJ14List" parameterType="SJ14" resultMap="SJ14Result">
+        select * from sj14
+        where 1 = 1
+        <if test="id != null">
+            AND id = #{id}
+        </if>
+        <if test="time != null">
+            AND time = #{time}
+        </if>
+        <if test="position != null and position != ''">
+            AND position = #{position}
+        </if>
+        <if test="userid != null">
+            AND userid = #{userid}
+        </if>
+        <if test="constructionUnit != null and constructionUnit != ''">
+            AND constructionUnit = #{constructionUnit}
+        </if>
+        <if test="contractNumber != null and contractNumber != ''">
+            AND contractNumber = #{contractNumber}
+        </if>
+        <if test="supervisionUnit != null and supervisionUnit != ''">
+            AND supervisionUnit = #{supervisionUnit}
+        </if>
+        <if test="recordNumber != null and recordNumber != ''">
+            AND recordNumber = #{recordNumber}
+        </if>
+        <if test="projectName != null and projectName != ''">
+            AND projectName = #{projectName}
+        </if>
+        <if test="constructionTime != null">
+            AND constructionTime = #{constructionTime}
+        </if>
+        <if test="projectLocation != null and projectLocation != ''">
+            AND projectLocation = #{projectLocation}
+        </if>
+        <if test="concreteStrength != null and concreteStrength != ''">
+            AND concreteStrength = #{concreteStrength}
+        </if>
+        <if test="cleanupCondition != null and cleanupCondition != ''">
+            AND cleanupCondition = #{cleanupCondition}
+        </if>
+        <if test="backfillRange != null and backfillRange != ''">
+            AND backfillRange = #{backfillRange}
+        </if>
+        <if test="backfillMaterial != null and backfillMaterial != ''">
+            AND backfillMaterial = #{backfillMaterial}
+        </if>
+        <if test="compactionMechanical != null and compactionMechanical != ''">
+            AND compactionMechanical = #{compactionMechanical}
+        </if>
+        <if test="backfillLevel != null">
+            AND backfillLevel = #{backfillLevel}
+        </if>
+        <if test="looseThickness != null">
+            AND looseThickness = #{looseThickness}
+        </if>
+        <if test="compactionCheck != null and compactionCheck != ''">
+            AND compactionCheck = #{compactionCheck}
+        </if>
+        <if test="testRecordNumber != null and testRecordNumber != ''">
+            AND testRecordNumber = #{testRecordNumber}
+        </if>
+        <if test="backfillLevel2 != null">
+            AND backfillLevel2 = #{backfillLevel2}
+        </if>
+        <if test="looseThickness2 != null">
+            AND looseThickness2 = #{looseThickness2}
+        </if>
+        <if test="compactionCheck2 != null and compactionCheck2 != ''">
+            AND compactionCheck2 = #{compactionCheck2}
+        </if>
+        <if test="testRecordNumber2 != null and testRecordNumber2 != ''">
+            AND testRecordNumber2 = #{testRecordNumber2}
+        </if>
+        <if test="description != null and description != ''">
+            AND description = #{description}
+        </if>
+        <!-- 数据范围过滤 -->
+        ${params.dataScope}
+    </select>
+
+    <select id="selectSJ14ById" parameterType="Long" resultMap="SJ14Result">
+        select *
+        from sj14
+        where id = #{id}
+    </select>
+
+    <insert id="insertSJ14" parameterType="SJ14" useGeneratedKeys="true" keyProperty="id">
+        insert into sj14(
+        <if test="time != null">time,</if>
+        <if test="position != null and position != ''">position,</if>
+        <if test="userid != null">userid,</if>
+        <if test="constructionUnit != null and constructionUnit != ''">constructionUnit,</if>
+        <if test="contractNumber != null and contractNumber != ''">contractNumber,</if>
+        <if test="supervisionUnit != null and supervisionUnit != ''">supervisionUnit,</if>
+        <if test="recordNumber != null and recordNumber != ''">recordNumber,</if>
+        <if test="projectName != null and projectName != ''">projectName,</if>
+        <if test="constructionTime != null">constructionTime,</if>
+        <if test="projectLocation != null and projectLocation != ''">projectLocation,</if>
+        <if test="concreteStrength != null and concreteStrength != ''">concreteStrength,</if>
+        <if test="cleanupCondition != null and cleanupCondition != ''">cleanupCondition,</if>
+        <if test="backfillRange != null and backfillRange != ''">backfillRange,</if>
+        <if test="backfillMaterial != null and backfillMaterial != ''">backfillMaterial,</if>
+        <if test="compactionMechanical != null and compactionMechanical != ''">compactionMechanical,</if>
+        <if test="backfillLevel != null">backfillLevel,</if>
+        <if test="looseThickness != null">looseThickness,</if>
+        <if test="compactionCheck != null and compactionCheck != ''">compactionCheck,</if>
+        <if test="testRecordNumber != null and testRecordNumber != ''">testRecordNumber,</if>
+        <if test="backfillLevel2 != null">backfillLevel2,</if>
+        <if test="looseThickness2 != null">looseThickness2,</if>
+        <if test="compactionCheck2 != null and compactionCheck2 != ''">compactionCheck2,</if>
+        <if test="testRecordNumber2 != null and testRecordNumber2 != ''">testRecordNumber2,</if>
+        <if test="description != null and description != ''">description,</if>
+        id
+        )values(
+        <if test="time != null">#{time},</if>
+        <if test="position != null and position != ''">#{position},</if>
+        <if test="userid != null">#{userid},</if>
+        <if test="constructionUnit != null and constructionUnit != ''">#{constructionUnit},</if>
+        <if test="contractNumber != null and contractNumber != ''">#{contractNumber},</if>
+        <if test="supervisionUnit != null and supervisionUnit !=''">#{supervisionUnit},</if>
+        <if test="recordNumber != null and recordNumber != ''">#{recordNumber},</if>
+        <if test="projectName != null and projectName != ''">#{projectName},</if>
+        <if test="constructionTime != null">#{constructionTime},</if>
+        <if test="projectLocation != null and projectLocation != ''">#{projectLocation},</if>
+        <if test="concreteStrength != null and concreteStrength != ''">#{concreteStrength},</if>
+        <if test="cleanupCondition != null and cleanupCondition != ''">#{cleanupCondition},</if>
+        <if test="backfillRange != null and backfillRange != ''">#{backfillRange},</if>
+        <if test="backfillMaterial != null and backfillMaterial != ''">#{backfillMaterial},</if>
+        <if test="compactionMechanical != null and compactionMechanical != ''">#{compactionMechanical},</if>
+        <if test="backfillLevel != null">#{backfillLevel},</if>
+        <if test="looseThickness != null">#{looseThickness},</if>
+        <if test="compactionCheck != null and compactionCheck != ''">#{compactionCheck},</if>
+        <if test="testRecordNumber != null and testRecordNumber != ''">#{testRecordNumber},</if>
+        <if test="backfillLevel2 != null">#{backfillLevel2},</if>
+        <if test="looseThickness2 != null">#{looseThickness2},</if>
+        <if test="compactionCheck2 != null and compactionCheck2 != ''">#{compactionCheck2},</if>
+        <if test="testRecordNumber2 != null and testRecordNumber2 != ''">#{testRecordNumber2},</if>
+        <if test="description != null and description != ''">#{description},</if>
+        null
+        )
+    </insert>
+
+    <update id="updateSJ14" parameterType="SJ14">
+        update sj14
+        <set>
+            <if test="time != null">
+                time = #{time},
+            </if>
+            <if test="position != null and position != ''">
+                position = #{position},
+            </if>
+            <if test="userid != null">
+                userid = #{userid},
+            </if>
+            <if test="constructionUnit != null and constructionUnit != ''">
+                constructionUnit = #{constructionUnit},
+            </if>
+            <if test="contractNumber != null and contractNumber != ''">
+                contractNumber = #{contractNumber},
+            </if>
+            <if test="supervisionUnit != null and supervisionUnit != ''">
+                supervisionUnit = #{supervisionUnit},
+            </if>
+            <if test="recordNumber != null and recordNumber != ''">
+                recordNumber = #{recordNumber},
+            </if>
+            <if test="projectName != null and projectName != ''">
+                projectName = #{projectName},
+            </if>
+            <if test="constructionTime != null">
+                constructionTime = #{constructionTime},
+            </if>
+            <if test="projectLocation != null and projectLocation != ''">
+                projectLocation = #{projectLocation},
+            </if>
+            <if test="concreteStrength != null and concreteStrength != ''">
+                concreteStrength = #{concreteStrength},
+            </if>
+            <if test="cleanupCondition != null and cleanupCondition != ''">
+                cleanupCondition = #{cleanupCondition},
+            </if>
+            <if test="backfillRange != null and backfillRange != ''">
+                backfillRange = #{backfillRange},
+            </if>
+            <if test="backfillMaterial != null and backfillMaterial != ''">
+                backfillMaterial = #{backfillMaterial},
+            </if>
+            <if test="compactionMechanical != null and compactionMechanical != ''">
+                compactionMechanical = #{compactionMechanical},
+            </if>
+            <if test="backfillLevel != null">
+                backfillLevel = #{backfillLevel},
+            </if>
+            <if test="looseThickness != null">
+                looseThickness = #{looseThickness},
+            </if>
+            <if test="compactionCheck != null and compactionCheck != ''">
+                compactionCheck = #{compactionCheck},
+            </if>
+            <if test="testRecordNumber != null and testRecordNumber != ''">
+                testRecordNumber = #{testRecordNumber},
+            </if>
+            <if test="backfillLevel2 != null">
+                backfillLevel2 = #{backfillLevel2},
+            </if>
+            <if test="looseThickness2 != null">
+                looseThickness2 = #{looseThickness2},
+            </if>
+            <if test="compactionCheck2 != null and compactionCheck2 != ''">
+                compactionCheck2 = #{compactionCheck2},
+            </if>
+            <if test="testRecordNumber2 != null and testRecordNumber2 != ''">
+                testRecordNumber2 = #{testRecordNumber2},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteSJ14ById" parameterType="Long">
+        delete
+        from sj14
+        where id = #{id}
+    </delete>
+
+    <delete id="deleteSJ14ByIds" parameterType="Long">
+        delete from sj14 where id in
+        <foreach collection="array" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>
