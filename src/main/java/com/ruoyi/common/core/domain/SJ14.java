@@ -10,7 +10,7 @@ import java.util.Date;
 public class SJ14 extends BaseEntity {
     private int id;     //序号，主键
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "YYYY-MM-DD HH:mm:ss")
     private Date time;  //采集数据提交的时间，自动采集
 
     private String position;    //采集数据提交的地点（经纬度），自动采集
@@ -39,6 +39,9 @@ public class SJ14 extends BaseEntity {
     private String compactionCheck2; // 压实度检验或 试件取样情况
     private String testRecordNumber2; // 试验 记录单号
     private String description;         //回填后结构物有无位移、裂缝等破坏情况
+
+
+
 
     public int getId() {
         return id;

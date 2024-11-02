@@ -35,81 +35,81 @@
     <select id="selectSJ14List" parameterType="SJ14" resultMap="SJ14Result">
         select * from sj14
         where 1 = 1
-        <if test="id != null">
-            AND id = #{id}
-        </if>
-        <if test="time != null">
-            AND time = #{time}
-        </if>
-        <if test="position != null and position != ''">
-            AND position = #{position}
-        </if>
-        <if test="userid != null">
-            AND userid = #{userid}
-        </if>
-        <if test="constructionUnit != null and constructionUnit != ''">
-            AND constructionUnit = #{constructionUnit}
-        </if>
+<!--        <if test="id != null and id != 0">-->
+<!--            AND id = #{id}-->
+<!--        </if>-->
+<!--        <if test="time != null">-->
+<!--            AND time = #{time}-->
+<!--        </if>-->
+<!--        <if test="position != null and position != ''">-->
+<!--            AND position = #{position}-->
+<!--        </if>-->
+<!--        <if test="userid != null and userid != 0">-->
+<!--            AND userid = #{userid}-->
+<!--        </if>-->
+<!--        <if test="constructionUnit != null and constructionUnit != ''">-->
+<!--            AND constructionUnit = #{constructionUnit}-->
+<!--        </if>-->
         <if test="contractNumber != null and contractNumber != ''">
             AND contractNumber = #{contractNumber}
         </if>
-        <if test="supervisionUnit != null and supervisionUnit != ''">
-            AND supervisionUnit = #{supervisionUnit}
-        </if>
-        <if test="recordNumber != null and recordNumber != ''">
-            AND recordNumber = #{recordNumber}
-        </if>
-        <if test="projectName != null and projectName != ''">
-            AND projectName = #{projectName}
-        </if>
-        <if test="constructionTime != null">
-            AND constructionTime = #{constructionTime}
-        </if>
-        <if test="projectLocation != null and projectLocation != ''">
-            AND projectLocation = #{projectLocation}
-        </if>
-        <if test="concreteStrength != null and concreteStrength != ''">
-            AND concreteStrength = #{concreteStrength}
-        </if>
-        <if test="cleanupCondition != null and cleanupCondition != ''">
-            AND cleanupCondition = #{cleanupCondition}
-        </if>
-        <if test="backfillRange != null and backfillRange != ''">
-            AND backfillRange = #{backfillRange}
-        </if>
-        <if test="backfillMaterial != null and backfillMaterial != ''">
-            AND backfillMaterial = #{backfillMaterial}
-        </if>
-        <if test="compactionMechanical != null and compactionMechanical != ''">
-            AND compactionMechanical = #{compactionMechanical}
-        </if>
-        <if test="backfillLevel != null">
-            AND backfillLevel = #{backfillLevel}
-        </if>
-        <if test="looseThickness != null">
-            AND looseThickness = #{looseThickness}
-        </if>
-        <if test="compactionCheck != null and compactionCheck != ''">
-            AND compactionCheck = #{compactionCheck}
-        </if>
-        <if test="testRecordNumber != null and testRecordNumber != ''">
-            AND testRecordNumber = #{testRecordNumber}
-        </if>
-        <if test="backfillLevel2 != null">
-            AND backfillLevel2 = #{backfillLevel2}
-        </if>
-        <if test="looseThickness2 != null">
-            AND looseThickness2 = #{looseThickness2}
-        </if>
-        <if test="compactionCheck2 != null and compactionCheck2 != ''">
-            AND compactionCheck2 = #{compactionCheck2}
-        </if>
-        <if test="testRecordNumber2 != null and testRecordNumber2 != ''">
-            AND testRecordNumber2 = #{testRecordNumber2}
-        </if>
-        <if test="description != null and description != ''">
-            AND description = #{description}
-        </if>
+<!--        <if test="supervisionUnit != null and supervisionUnit != ''">-->
+<!--            AND supervisionUnit = #{supervisionUnit}-->
+<!--        </if>-->
+<!--        <if test="recordNumber != null and recordNumber != ''">-->
+<!--            AND recordNumber = #{recordNumber}-->
+<!--        </if>-->
+<!--        <if test="projectName != null and projectName != ''">-->
+<!--            AND projectName = #{projectName}-->
+<!--        </if>-->
+<!--        <if test="constructionTime != null">-->
+<!--            AND constructionTime = #{constructionTime}-->
+<!--        </if>-->
+<!--        <if test="projectLocation != null and projectLocation != ''">-->
+<!--            AND projectLocation = #{projectLocation}-->
+<!--        </if>-->
+<!--        <if test="concreteStrength != null and concreteStrength != ''">-->
+<!--            AND concreteStrength = #{concreteStrength}-->
+<!--        </if>-->
+<!--        <if test="cleanupCondition != null and cleanupCondition != ''">-->
+<!--            AND cleanupCondition = #{cleanupCondition}-->
+<!--        </if>-->
+<!--        <if test="backfillRange != null and backfillRange != ''">-->
+<!--            AND backfillRange = #{backfillRange}-->
+<!--        </if>-->
+<!--        <if test="backfillMaterial != null and backfillMaterial != ''">-->
+<!--            AND backfillMaterial = #{backfillMaterial}-->
+<!--        </if>-->
+<!--        <if test="compactionMechanical != null and compactionMechanical != ''">-->
+<!--            AND compactionMechanical = #{compactionMechanical}-->
+<!--        </if>-->
+<!--        <if test="backfillLevel != null and backfillLevel != 0">-->
+<!--            AND backfillLevel = #{backfillLevel}-->
+<!--        </if>-->
+<!--        <if test="looseThickness != null and looseThickness != 0">-->
+<!--            AND looseThickness = #{looseThickness}-->
+<!--        </if>-->
+<!--        <if test="compactionCheck != null and compactionCheck != ''">-->
+<!--            AND compactionCheck = #{compactionCheck}-->
+<!--        </if>-->
+<!--        <if test="testRecordNumber != null and testRecordNumber != ''">-->
+<!--            AND testRecordNumber = #{testRecordNumber}-->
+<!--        </if>-->
+<!--        <if test="backfillLevel2 != null and backfillLevel2 != 0">-->
+<!--            AND backfillLevel2 = #{backfillLevel2}-->
+<!--        </if>-->
+<!--        <if test="looseThickness2 != null and looseThickness2 != 0">-->
+<!--            AND looseThickness2 = #{looseThickness2}-->
+<!--        </if>-->
+<!--        <if test="compactionCheck2 != null and compactionCheck2 != ''">-->
+<!--            AND compactionCheck2 = #{compactionCheck2}-->
+<!--        </if>-->
+<!--        <if test="testRecordNumber2 != null and testRecordNumber2 != ''">-->
+<!--            AND testRecordNumber2 = #{testRecordNumber2}-->
+<!--        </if>-->
+<!--        <if test="description != null and description != ''">-->
+<!--            AND description = #{description}-->
+<!--        </if>-->
         <!-- 数据范围过滤 -->
         ${params.dataScope}
     </select>
@@ -120,11 +120,12 @@
         where id = #{id}
     </select>
 
+    <!--int、float都需要判断 != 0-->
     <insert id="insertSJ14" parameterType="SJ14" useGeneratedKeys="true" keyProperty="id">
         insert into sj14(
         <if test="time != null">time,</if>
         <if test="position != null and position != ''">position,</if>
-        <if test="userid != null">userid,</if>
+        <if test="userid != null and userid != 0">userid,</if>
         <if test="constructionUnit != null and constructionUnit != ''">constructionUnit,</if>
         <if test="contractNumber != null and contractNumber != ''">contractNumber,</if>
         <if test="supervisionUnit != null and supervisionUnit != ''">supervisionUnit,</if>
@@ -137,12 +138,12 @@
         <if test="backfillRange != null and backfillRange != ''">backfillRange,</if>
         <if test="backfillMaterial != null and backfillMaterial != ''">backfillMaterial,</if>
         <if test="compactionMechanical != null and compactionMechanical != ''">compactionMechanical,</if>
-        <if test="backfillLevel != null">backfillLevel,</if>
-        <if test="looseThickness != null">looseThickness,</if>
+        <if test="backfillLevel != null and backfillLevel != 0">backfillLevel,</if>
+        <if test="looseThickness != null and looseThickness != 0">looseThickness,</if>
         <if test="compactionCheck != null and compactionCheck != ''">compactionCheck,</if>
         <if test="testRecordNumber != null and testRecordNumber != ''">testRecordNumber,</if>
-        <if test="backfillLevel2 != null">backfillLevel2,</if>
-        <if test="looseThickness2 != null">looseThickness2,</if>
+        <if test="backfillLevel2 != null and backfillLevel2 != 0">backfillLevel2,</if>
+        <if test="looseThickness2 != null and looseThickness2 != 0">looseThickness2,</if>
         <if test="compactionCheck2 != null and compactionCheck2 != ''">compactionCheck2,</if>
         <if test="testRecordNumber2 != null and testRecordNumber2 != ''">testRecordNumber2,</if>
         <if test="description != null and description != ''">description,</if>
@@ -150,7 +151,7 @@
         )values(
         <if test="time != null">#{time},</if>
         <if test="position != null and position != ''">#{position},</if>
-        <if test="userid != null">#{userid},</if>
+        <if test="userid != null and userid != 0">#{userid},</if>
         <if test="constructionUnit != null and constructionUnit != ''">#{constructionUnit},</if>
         <if test="contractNumber != null and contractNumber != ''">#{contractNumber},</if>
         <if test="supervisionUnit != null and supervisionUnit !=''">#{supervisionUnit},</if>
@@ -163,12 +164,12 @@
         <if test="backfillRange != null and backfillRange != ''">#{backfillRange},</if>
         <if test="backfillMaterial != null and backfillMaterial != ''">#{backfillMaterial},</if>
         <if test="compactionMechanical != null and compactionMechanical != ''">#{compactionMechanical},</if>
-        <if test="backfillLevel != null">#{backfillLevel},</if>
-        <if test="looseThickness != null">#{looseThickness},</if>
+        <if test="backfillLevel != null and backfillLevel != 0">#{backfillLevel},</if>
+        <if test="looseThickness != null and looseThickness != 0">#{looseThickness},</if>
         <if test="compactionCheck != null and compactionCheck != ''">#{compactionCheck},</if>
         <if test="testRecordNumber != null and testRecordNumber != ''">#{testRecordNumber},</if>
-        <if test="backfillLevel2 != null">#{backfillLevel2},</if>
-        <if test="looseThickness2 != null">#{looseThickness2},</if>
+        <if test="backfillLevel2 != null and backfillLevel2 != 0">#{backfillLevel2},</if>
+        <if test="looseThickness2 != null and looseThickness2 != 0">#{looseThickness2},</if>
         <if test="compactionCheck2 != null and compactionCheck2 != ''">#{compactionCheck2},</if>
         <if test="testRecordNumber2 != null and testRecordNumber2 != ''">#{testRecordNumber2},</if>
         <if test="description != null and description != ''">#{description},</if>
